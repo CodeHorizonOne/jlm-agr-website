@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | JLM ENCG Agadir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Tajawal', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased pt-24">
+
+    <!-- شريط التنقل -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm py-4 px-6 fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-black text-2xl text-blue-900 flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-green-600"></i> JLM <span class="text-green-600">AGR</span>
+            </a>
+            <div class="hidden md:flex gap-8 font-bold text-gray-600 items-center">
+                <a href="index.html" class="hover:text-blue-900 transition"><i class="fa-solid fa-house ml-1"></i> الرئيسية</a>
+                <a href="about.html" class="hover:text-blue-900 transition"><i class="fa-solid fa-users ml-1"></i> من نحن</a>
+                <a href="projects.html" class="hover:text-blue-900 transition"><i class="fa-solid fa-lightbulb ml-1"></i> مشاريعنا</a>
+                <a href="contact.html" class="bg-blue-900 text-white px-5 py-2 rounded-full transition shadow-md">تواصل معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ترويسة الصفحة -->
+    <section class="bg-gradient-to-br from-green-600 to-green-500 text-white py-16 px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-black mb-4">لنبنِ الأثر معاً</h1>
+        <p class="text-green-50 text-lg max-w-2xl mx-auto">نرحب بتساؤلاتكم، وشراكاتكم، ودعمكم لمشاريعنا.</p>
+    </section>
+
+    <!-- قسم التواصل والاستمارة -->
+    <section class="py-16 px-6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- معلومات الاتصال -->
+        <div>
+            <h2 class="text-3xl font-black text-blue-900 mb-8">معلومات التواصل</h2>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">مقر النادي</h4>
+                        <p class="text-gray-600">المدرسة الوطنية للتجارة والتسيير، حي السلام، أكادير</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">البريد الإلكتروني</h4>
+                        <p class="text-gray-600" dir="ltr">contact.jlm@encg-agadir.ma</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">إنستغرام</h4>
+                        <p class="text-gray-600" dir="ltr">@jlm_encgagadir</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- استمارة المراسلة -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">أرسل لنا رسالة</h3>
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">الاسم الكامل</label>
+                    <input type="text" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-900" placeholder="أدخل اسمك...">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">البريد الإلكتروني</label>
+                    <input type="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-900" placeholder="example@mail.com">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">موضوع الرسالة</label>
+                    <select class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-900">
+                        <option>استفسار عام</option>
+                        <option>اقتراح شراكة</option>
+                        <option>دعم وتمويل</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">الرسالة</label>
+                    <textarea rows="4" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-900" placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+                <button type="button" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition">إرسال الرسالة</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="bg-slate-900 text-white py-8 px-6 text-center border-t-4 border-blue-900">
+        <p class="text-gray-500 text-sm font-bold">© 2026 جميع الحقوق محفوظة | لجنة AGR - JLM ENCG Agadir</p>
+    </footer>
+
+</body>
+</html>
