@@ -1,637 +1,98 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JLM ENCG Agadir | لجنة المشاريع المولدَة للدخل (AGR)</title>
-    <!-- Tailwind CSS CDN -->
+    <title>JLM ENCG Agadir - AGR Committee</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Tajawal -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        jlm: {
-                            blue: '#0F2C59',
-                            darkBlue: '#071933',
-                            green: '#10B981',
-                            greenHover: '#059669',
-                            accent: '#F59E0B',
-                            lightBg: '#F8FAFC'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Tajawal', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-        }
-        .gradient-hero {
-            background: linear-gradient(135deg, #071933 0%, #0F2C59 60%, #1E3A8A 100%);
-        }
+        body { font-family: 'Tajawal', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-jlm-blue flex items-center justify-center text-white font-black text-xl shadow-md border-2 border-jlm-green">
-                    JLM
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+        <div class="font-bold text-xl text-blue-900">JLM ENCG Agadir | <span class="text-green-600">AGR</span></div>
+        
+        <div class="flex items-center gap-4">
+            <!-- Language Switcher Buttons -->
+            <div class="flex border rounded-lg overflow-hidden text-sm">
+                <button onclick="setLanguage('ar')" id="btn-ar" class="px-3 py-1 bg-blue-900 text-white font-bold">العربية</button>
+                <button onclick="setLanguage('fr')" id="btn-fr" class="px-3 py-1 bg-gray-200 text-gray-700 font-bold">Français</button>
+            </div>
+            <a href="#donate" data-ar="تبرع الآن" data-fr="Faire un don" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full font-bold transition">تبرع الآن</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-900 text-white py-20 px-6 text-center">
+        <h1 data-ar="نُمكّن الإنسان لنصنع أثراً مستداماً" data-fr="Autonomiser les personnes pour un impact durable" class="text-4xl md:text-6xl font-black mb-4">نُمكّن الإنسان لنصنع أثراً مستداماً</h1>
+        <p data-ar="مبادرة لجنة AGR بنادي JLM ENCG أكادير لدعم وتطوير المشاريع المولدَة للدخل والتضامن المجتمعي." data-fr="Initiative du comité AGR du club JLM ENCG Agadir pour soutenir les projets générateurs de revenus." class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+            مبادرة لجنة AGR بنادي JLM ENCG أكادير لدعم وتطوير المشاريع المولدَة للدخل والتضامن المجتمعي.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="#donate" data-ar="تبرع للمشروع" data-fr="Soutenir le projet" class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 rounded-lg text-lg transition">تبرع للمشروع</a>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="py-16 px-6 max-w-4xl mx-auto">
+        <h2 data-ar="طرق التبرع والدعم" data-fr="Moyens de faire un don" class="text-3xl font-bold text-center mb-8 text-blue-900">طرق التبرع والدعم</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Bank Transfer Info -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <h3 data-ar="💳 التحويل البنكي المباشر" data-fr="💳 Virement Bancaire" class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">💳 التحويل البنكي المباشر</h3>
+                <p data-ar="الحساب البنكي الرسمي للنادي/الجمعية:" data-fr="Compte bancaire officiel:" class="text-sm text-gray-600 mb-2">الحساب البنكي الرسمي للنادي/الجمعية:</p>
+                <div class="bg-gray-100 p-3 rounded font-mono text-center font-bold text-blue-900 mb-3 select-all">
+                    007 780 0001234567890123 45
                 </div>
-                <div>
-                    <span class="block font-black text-lg text-jlm-blue leading-tight">JLM ENCG Agadir</span>
-                    <span class="block text-xs font-semibold text-jlm-green">لجنة المشاريع المولدَة للدخل (AGR)</span>
-                </div>
+                <p class="text-xs text-gray-500">RIB: JLM ENCG AGADIR</p>
             </div>
 
-            <!-- Desktop Nav Items -->
-            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
-                <a href="#hero" class="hover:text-jlm-blue transition">الرئيسية</a>
-                <a href="#campaign" class="hover:text-jlm-blue transition">الحملة الحالية</a>
-                <a href="#impact" class="hover:text-jlm-blue transition">الأثر المجتمعي</a>
-                <a href="#projects" class="hover:text-jlm-blue transition">مشاريع الـ AGR</a>
-                <a href="#transparency" class="hover:text-jlm-blue transition">الشفافية</a>
-            </nav>
-
-            <!-- Action Button -->
-            <div class="flex items-center gap-3">
-                <a href="#tiers" class="bg-jlm-green hover:bg-jlm-greenHover text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition flex items-center gap-2">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>تبرع الآن</span>
-                </a>
+            <!-- Cash Plus / Direct -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <h3 data-ar="📍 تحويل Cash Plus / Wafacash" data-fr="📍 Cash Plus / Wafacash" class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">📍 تحويل Cash Plus / Wafacash</h3>
+                <p data-ar="اسم المسؤول عن الجمع:" data-fr="Nom du responsable:" class="text-sm text-gray-600 mb-2">اسم المسؤول عن الجمع:</p>
+                <p class="font-bold text-gray-800 mb-2">Hamza Bouazza</p>
+                <p data-ar="رقم الهاتف:" data-fr="Téléphone:" class="text-sm text-gray-600 mb-2">رقم الهاتف:</p>
+                <p class="font-bold text-blue-900 mb-3">06 XX XX XX XX</p>
             </div>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="flex-grow">
-        
-        <!-- Hero Section -->
-        <section id="hero" class="gradient-hero text-white py-16 md:py-24 px-4 relative overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.15),transparent_50%)]"></div>
-            
-            <div class="max-w-6xl mx-auto text-center relative z-10">
-                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-jlm-green border border-white/10 text-xs md:text-sm font-bold mb-6">
-                    <span class="w-2 h-2 rounded-full bg-jlm-green animate-pulse"></span>
-                    حملة التضامن والتمكين الاقتصادي 2026
-                </span>
-                <h1 class="text-3xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
-                    نُمكّن الإنسان لنصنع <span class="text-jlm-green underline decoration-wavy decoration-jlm-accent underline-offset-8">أثراً مستداماً</span>
-                </h1>
-                <p class="text-slate-300 text-base md:text-xl max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
-                    مبادرة طلابية تنموية من نادي Junior Leaders of Morocco بكلية ENCG أكادير، تهدف لخلق وتطوير مشاريع مستدامة مولدة للدخل وقوافل تضامنية لدعم الفئات الأكثر احتياجاً.
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                    <a href="#tiers" class="w-full sm:w-auto bg-jlm-green hover:bg-jlm-greenHover text-white font-bold px-8 py-3.5 rounded-xl text-base transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                        <span>ساهم في التغيير</span>
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </a>
-                    <a href="#campaign" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl text-base border border-white/20 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-[#00A3FF] fa-circle-info"></i>
-                        <span>تفاصيل الحملة</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Live Campaign Tracker Section -->
-        <section id="campaign" class="py-12 -mt-10 relative z-20 px-4">
-            <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-8">
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-6">
-                    <div>
-                        <div class="flex items-center gap-2 text-jlm-green text-xs font-bold uppercase tracking-wider mb-1">
-                            <i class="fa-solid fa-fire"></i> الحملة التضامنية الحالية
-                        </div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-jlm-darkBlue">قافلة شتاء وجسور الأمل 2026</h2>
-                    </div>
-                    <div class="bg-slate-50 px-4 py-2 rounded-xl border border-slate-200/60 text-right">
-                        <span class="text-xs text-slate-500 font-medium block">تاريخ الإغلاق المتوقع</span>
-                        <span class="text-sm font-bold text-slate-700"><i class="fa-regular fa-clock text-jlm-blue ml-1"></i> 15 مارس 2026</span>
-                    </div>
-                </div>
-
-                <!-- Live Progress Bar -->
-                <div class="mb-6">
-                    <div class="flex justify-between items-end mb-2">
-                        <div>
-                            <span class="text-3xl font-black text-jlm-blue" id="current-amount">34,500</span>
-                            <span class="text-sm font-bold text-slate-500 mr-1">درهم مغربي</span>
-                        </div>
-                        <div class="text-left">
-                            <span class="text-xs text-slate-400 block">الهدف المطلوب</span>
-                            <span class="text-lg font-bold text-slate-700" id="target-amount">50,000 درهم</span>
-                        </div>
-                    </div>
-
-                    <!-- Progress Bar Container -->
-                    <div class="w-full h-4 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200">
-                        <div id="progress-bar-fill" class="h-full bg-gradient-to-r from-jlm-green to-emerald-400 rounded-full transition-all duration-1000 ease-out" style="width: 69%;"></div>
-                    </div>
-
-                    <div class="flex justify-between items-center text-xs text-slate-500 font-medium mt-2">
-                        <span>نسبة الإنجاز: <strong class="text-jlm-green font-bold text-sm" id="progress-percentage">69%</strong></span>
-                        <span>مجموع المساهمين: <strong class="text-jlm-blue font-bold text-sm" id="donor-count">142</strong> مٌتبرع</span>
-                    </div>
-                </div>
-
-                <!-- Quick Impact Distribution Breakdown -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4 border-t border-slate-100 text-center">
-                    <div class="p-2 bg-slate-50 rounded-xl">
-                        <span class="text-xs text-slate-500 block">قفف غذائية</span>
-                        <span class="font-bold text-jlm-blue text-sm">80/100 أسرة</span>
-                    </div>
-                    <div class="p-2 bg-slate-50 rounded-xl">
-                        <span class="text-xs text-slate-500 block">أغطية دافئة</span>
-                        <span class="font-bold text-jlm-blue text-sm">150/200 مستفيد</span>
-                    </div>
-                    <div class="p-2 bg-slate-50 rounded-xl">
-                        <span class="text-xs text-slate-500 block">ورَشة AGR مساندة</span>
-                        <span class="font-bold text-jlm-blue text-sm">2 مشاريع مصغرة</span>
-                    </div>
-                    <div class="p-2 bg-slate-50 rounded-xl">
-                        <span class="text-xs text-slate-500 block">المناطق المستهدفة</span>
-                        <span class="font-bold text-jlm-blue text-sm">أقاليم تارودانت/تارودانت</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact Counter Section -->
-        <section id="impact" class="py-12 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl md:text-3xl font-bold text-jlm-darkBlue">حصيلة الأثر المجتمعي</h2>
-                    <p class="text-slate-500 text-sm md:text-base mt-2">نتائج عمل لجنة الـ AGR بنادي JLM ENCG Agadir خلال الدورات التنموية الأخيرة</p>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-md transition">
-                        <div class="w-12 h-12 bg-emerald-100 text-jlm-green rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-people-roof"></i>
-                        </div>
-                        <div class="text-3xl font-black text-jlm-blue mb-1" data-counter="180">180+</div>
-                        <div class="text-xs md:text-sm font-semibold text-slate-600">أسرة تم إدماجها وتأطيرها</div>
-                    </div>
-
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-md transition">
-                        <div class="w-12 h-12 bg-blue-100 text-jlm-blue rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-                        <div class="text-3xl font-black text-jlm-blue mb-1" data-counter="12">12</div>
-                        <div class="text-xs md:text-sm font-semibold text-slate-600">مشروع AGR تم إطلاقه</div>
-                    </div>
-
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-md transition">
-                        <div class="w-12 h-12 bg-amber-100 text-jlm-accent rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                        </div>
-                        <div class="text-3xl font-black text-jlm-blue mb-1" data-counter="45">45+</div>
-                        <div class="text-xs md:text-sm font-semibold text-slate-600">ورشة ودورة تدريبية</div>
-                    </div>
-
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:shadow-md transition">
-                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <div class="text-3xl font-black text-jlm-blue mb-1" data-counter="65">65</div>
-                        <div class="text-xs md:text-sm font-semibold text-slate-600">طالب متطوع ومؤطر</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Donation Tier Selector Section -->
-        <section id="tiers" class="py-16 bg-slate-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="text-jlm-green font-bold text-xs uppercase tracking-wider">اختر مساهمتك</span>
-                    <h2 class="text-3xl font-bold text-jlm-darkBlue mt-1">أسهم التبرع المباشر</h2>
-                    <p class="text-slate-500 text-sm mt-2">حدد الخيار المناسب لك للمساهمة المباشرة في القافلة ومشروعات التمكين</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Tier 1 -->
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between relative">
-                        <div>
-                            <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">سهم فردي</span>
-                            <h3 class="text-2xl font-bold text-jlm-darkBlue mt-3">سهم الدفء والأمل</h3>
-                            <div class="my-4">
-                                <span class="text-4xl font-black text-jlm-blue">150</span>
-                                <span class="text-slate-500 font-bold text-sm">درهم</span>
-                            </div>
-                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                                يضمن توفير بطانيات ومستلزمات التدفئة وملابس دافئة لفائدة أطفال ومستفيدي الأسر القروية.
-                            </p>
-                            <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> غطاء دافئ عالي الجودة</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> حزمة مستلزمات الشتاء للأطفال</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> تقرير توثيقي مدمج</li>
-                            </ul>
-                        </div>
-                        <button onclick="openDonationModal('سهم الدفء والأمل', 150)" class="w-full py-3.5 bg-slate-100 hover:bg-jlm-blue hover:text-white text-jlm-blue font-bold rounded-xl transition text-center">
-                            اختيار هذا السهم
-                        </button>
-                    </div>
-
-                    <!-- Tier 2 (Featured) -->
-                    <div class="bg-white rounded-3xl p-8 border-2 border-jlm-green shadow-xl transition flex flex-col justify-between relative transform md:-translate-y-2">
-                        <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-jlm-green text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
-                            الأكثر اختياراً
-                        </div>
-                        <div>
-                            <span class="px-3 py-1 rounded-full bg-emerald-50 text-jlm-green text-xs font-bold">سهم الأسرة</span>
-                            <h3 class="text-2xl font-bold text-jlm-darkBlue mt-3">سهم الكرامة للأسرة</h3>
-                            <div class="my-4">
-                                <span class="text-4xl font-black text-jlm-blue">300</span>
-                                <span class="text-slate-500 font-bold text-sm">درهم</span>
-                            </div>
-                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                                يغطي قفة غذائية متكاملة لأسرة لمدة شهر مع مواد التدفئة وتجهيزات الصحة الميدانية.
-                            </p>
-                            <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> قفة غذائية متكاملة لأسرة</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> مستلزمات النظافة والأغطية</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> شهادة شكر رقمية للمتبرع</li>
-                            </ul>
-                        </div>
-                        <button onclick="openDonationModal('سهم الكرامة للأسرة', 300)" class="w-full py-3.5 bg-jlm-green hover:bg-jlm-greenHover text-white font-bold rounded-xl transition text-center shadow-lg">
-                            اختيار هذا السهم
-                        </button>
-                    </div>
-
-                    <!-- Tier 3 -->
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between relative">
-                        <div>
-                            <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold">سهم AGR المستدام</span>
-                            <h3 class="text-2xl font-bold text-jlm-darkBlue mt-3">سهم تمكين مشروع AGR</h3>
-                            <div class="my-4">
-                                <span class="text-4xl font-black text-jlm-blue">600</span>
-                                <span class="text-slate-500 font-bold text-sm">درهم</span>
-                            </div>
-                            <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                                يساهم مباشرة في اقتناء المعدات والتأطير لمشروع استثماري مصغر مولّد للدخل يضمن الاستقلالية المالية.
-                            </p>
-                            <ul class="space-y-3 text-sm text-slate-600 mb-8">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> التمويل المباشر لشراء التجهيزات</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> دعم ورشات التكوين والتدريب</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-jlm-green text-xs"></i> تقرير تتبع المشروع الدوري</li>
-                            </ul>
-                        </div>
-                        <button onclick="openDonationModal('سهم تمكين مشروع AGR', 600)" class="w-full py-3.5 bg-slate-100 hover:bg-jlm-blue hover:text-white text-jlm-blue font-bold rounded-xl transition text-center">
-                            اختيار هذا السهم
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Open Amount Button -->
-                <div class="mt-8 text-center">
-                    <button onclick="openDonationModal('مبلغ حر', 0)" class="inline-flex items-center gap-2 text-jlm-blue hover:text-jlm-green font-bold text-sm bg-white px-6 py-3 rounded-xl border border-slate-200 shadow-sm transition">
-                        <i class="fa-solid fa-sliders"></i>
-                        <span>تريد التبرع بمبلغ آخر؟ اضغط هنا للمساهمة الحرة</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- AGR Projects Showcase Section -->
-        <section id="projects" class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                    <div>
-                        <span class="text-jlm-green font-bold text-xs uppercase tracking-wider">استدامة وحكامة</span>
-                        <h2 class="text-3xl font-bold text-jlm-darkBlue mt-1">نماذج من مشاريع الـ AGR</h2>
-                    </div>
-                    <p class="text-slate-500 text-sm max-w-md mt-2 md:mt-0">
-                        مشاريع مصغرة تم إنشاؤها وتأطيرها من طرف طلبة النادي لتحقيق الاستقلال المالي للمستفيدين.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
-                    <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition">
-                        <div class="h-48 bg-slate-200 relative flex items-center justify-center text-slate-400">
-                            <i class="fa-solid fa-seedling text-5xl"></i>
-                            <span class="absolute top-3 right-3 bg-jlm-darkBlue text-white text-xs px-3 py-1 rounded-full font-bold">جهة سوس ماسة</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-lg text-jlm-darkBlue mb-2">تعاونية تثمين النباتات الطبية</h3>
-                            <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4">
-                                تقديم المعدات والتغليف وتكوين مستفيدات الجمعية لتسويق المنتجات المحلية بجودة عالية.
-                            </p>
-                            <div class="flex items-center justify-between text-xs text-slate-500 font-semibold pt-3 border-t border-slate-200/60">
-                                <span><i class="fa-solid fa-user-group ml-1 text-jlm-green"></i> 12 امرأة مستفيدة</span>
-                                <span class="text-jlm-green font-bold">مستمر ومكتفي ذاتياً</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition">
-                        <div class="h-48 bg-slate-200 relative flex items-center justify-center text-slate-400">
-                            <i class="fa-solid fa-[#00A3FF] fa-basket-shopping text-5xl"></i>
-                            <span class="absolute top-3 right-3 bg-jlm-darkBlue text-white text-xs px-3 py-1 rounded-full font-bold">إقليم تارودانت</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-lg text-jlm-darkBlue mb-2">ورشة الخياطة والحرف التقليدية</h3>
-                            <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4">
-                                تمويل شراء آلات الخياطة وتوفير مادة الخام لإنتاج حقائب صديقة للبيئة (Tote Bags).
-                            </p>
-                            <div class="flex items-center justify-between text-xs text-slate-500 font-semibold pt-3 border-t border-slate-200/60">
-                                <span><i class="fa-solid fa-user-group ml-1 text-jlm-green"></i> 8 أسر مستفيدة</span>
-                                <span class="text-jlm-green font-bold">نمو بمقدار 40%</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition">
-                        <div class="h-48 bg-slate-200 relative flex items-center justify-center text-slate-400">
-                            <i class="fa-solid fa-wheat-awn text-5xl"></i>
-                            <span class="absolute top-3 right-3 bg-jlm-darkBlue text-white text-xs px-3 py-1 rounded-full font-bold">إقليم أشتوكة أيت باها</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-lg text-jlm-darkBlue mb-2">وحدة المخبوزات والحلويات المحلية</h3>
-                            <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-4">
-                                تجهيز فرن تقليدي متطور لربط المنتجات بمنافذ التوزيع والأسواق المحلية بالكلية والمدينة.
-                            </p>
-                            <div class="flex items-center justify-between text-xs text-slate-500 font-semibold pt-3 border-t border-slate-200/60">
-                                <span><i class="fa-solid fa-user-group ml-1 text-jlm-green"></i> 15 مستفيد مباشر</span>
-                                <span class="text-jlm-green font-bold">تغطية تشغيلية كاملة</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Transparency & Direct Bank Transfer Section -->
-        <section id="transparency" class="py-16 bg-slate-900 text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-jlm-green font-bold text-xs uppercase tracking-wider">شفافية كاملة</span>
-                        <h2 class="text-3xl font-bold mt-1 mb-6">الحسابات المباشرة للتبرع والتمويل</h2>
-                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-8">
-                            نضمن في نادي JLM ENCG Agadir أعلى مستويات الشفافية والتتبع. يتم تزويد جميع المساهمين والشركاء بتقارير مالية وتوثيقية دورية تظهر أثر كل درهم تم استثماره في الميدان.
-                        </p>
-
-                        <div class="space-y-4">
-                            <!-- Bank Account Card -->
-                            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                                <div>
-                                    <span class="text-xs text-slate-400 font-medium block">الحساب البنكي الرسمي (RIB)</span>
-                                    <span class="font-mono font-bold text-emerald-400 text-sm sm:text-base tracking-wider select-all" id="rib-number">007 780 0001234567890123 45</span>
-                                    <span class="text-xs text-slate-400 block mt-0.5">اسم الحساب: JLM ENCG AGADIR</span>
-                                </div>
-                                <button onclick="copyToClipboard('007780000123456789012345', 'تم نسخ رقم الـ RIB بنجاح!')" class="bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-2">
-                                    <i class="fa-regular fa-copy"></i>
-                                    <span>نسخ الـ RIB</span>
-                                </button>
-                            </div>
-
-                            <!-- Cash Plus Card -->
-                            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                                <div>
-                                    <span class="text-xs text-slate-400 font-medium block">تحويل سريع (Cash Plus / Wafacash)</span>
-                                    <span class="font-bold text-white text-sm">باسم: Hamza (مسؤول اللجنة المالية)</span>
-                                    <span class="text-xs text-emerald-400 font-mono block mt-0.5">الهاتف: 06 61 23 45 67</span>
-                                </div>
-                                <button onclick="copyToClipboard('0661234567', 'تم نسخ رقم الهاتف بنجاح!')" class="bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-2">
-                                    <i class="fa-regular fa-copy"></i>
-                                    <span>نسخ الرقم</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Confirmation Form Block -->
-                    <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl">
-                        <h3 class="text-xl font-bold text-jlm-darkBlue mb-2">تأكيد التبرع ورفع الوصل</h3>
-                        <p class="text-xs text-slate-500 mb-6">يرجى إدخال بياناتك ورفع وصل التحويل البنكي أو السريع ليتم تسجيل مساهمتك في العداد الحي وتأكيد الشكر.</p>
-
-                        <form id="receiptForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">الاسم الكامل</label>
-                                <input type="text" id="donorName" required placeholder="أدخل اسمك الكامل" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-jlm-blue transition">
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">المبلغ المتبرع به (درهم)</label>
-                                    <input type="number" id="donationAmount" required min="10" placeholder="مثال: 300" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-jlm-blue transition">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">السهم المستهدف</label>
-                                    <select id="donationTier" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-jlm-blue transition bg-white">
-                                        <option value="سهم الدفء والأمل">سهم الدفء والأمل (150 درهم)</option>
-                                        <option value="سهم الكرامة للأسرة" selected>سهم الكرامة للأسرة (300 درهم)</option>
-                                        <option value="سهم تمكين مشروع AGR">سهم مشروع AGR (600 درهم)</option>
-                                        <option value="مبلغ حر">مساهمة حرة</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">وصل الدفع / التحويل (صورة أو PDF)</label>
-                                <input type="file" id="receiptFile" required accept="image/*,.pdf" class="w-full text-xs text-slate-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-slate-100 file:text-jlm-blue hover:file:bg-slate-200 transition border border-slate-200 rounded-xl">
-                            </div>
-
-                            <button type="submit" class="w-full py-3.5 bg-jlm-green hover:bg-jlm-greenHover text-white font-bold rounded-xl shadow-lg transition text-sm flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-paper-plane"></i>
-                                <span>تأكيد وإرسال التثبيت</span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-slate-800 pb-8">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-jlm-blue flex items-center justify-center text-white font-black text-lg">
-                        JLM
-                    </div>
-                    <div>
-                        <span class="block font-bold text-white text-base">JLM ENCG Agadir</span>
-                        <span class="block text-xs text-slate-400">Junior Leaders of Morocco - المدرسة الوطنية للتجارة والتسيير بأكادير</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4 text-slate-400 text-lg">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-jlm-blue hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-jlm-blue hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-jlm-blue hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-
-            <div class="pt-8 text-center md:text-right text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p>© 2026 جميع الحقوق محفوظة لـ JLM ENCG Agadir - لجنة AGR.</p>
-                <p>مبادرة طلابية غير ربحية موجهة للتنمية المستدامة والتمكين الاقتصادي.</p>
-            </div>
-        </div>
+    <footer class="bg-gray-900 text-white py-6 text-center text-sm">
+        <p data-ar="© 2026 JLM ENCG Agadir - لجنة AGR. جميع الحقوق محفوظة." data-fr="© 2026 JLM ENCG Agadir - Comité AGR. Tous droits réservés.">© 2026 JLM ENCG Agadir - لجنة AGR. جميع الحقوق محفوظة.</p>
     </footer>
 
-    <!-- Donation Modal Dialog -->
-    <div id="donationModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl relative border border-slate-100 animate-in fade-in zoom-in duration-200">
-            <button onclick="closeDonationModal()" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 bg-emerald-100 text-jlm-green rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-jlm-darkBlue" id="modal-title">تأكيد التبرع</h3>
-                <p class="text-xs text-slate-500 mt-1" id="modal-subtitle">اختر طريقة الدفع المناسبة لك لإتمام المساهمة</p>
-            </div>
-
-            <div class="space-y-4 mb-6">
-                <!-- Option 1: Direct Bank Transfer -->
-                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 hover:border-jlm-green transition">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-sm text-jlm-blue"><i class="fa-solid fa-building-columns ml-1"></i> التحويل البنكي المباشر (RIB)</span>
-                        <span class="text-xs bg-slate-200 px-2 py-0.5 rounded font-bold">مجاني</span>
-                    </div>
-                    <p class="text-xs font-mono text-slate-700 bg-white p-2 rounded border border-slate-200 text-center select-all font-bold">
-                        007 780 0001234567890123 45
-                    </p>
-                </div>
-
-                <!-- Option 2: Cash Plus / Wafacash -->
-                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 hover:border-jlm-green transition">
-                    <div class="flex items-center justify-between mb-1">
-                        <span class="font-bold text-sm text-jlm-blue"><i class="fa-solid fa-money-bill-transfer ml-1"></i> Cash Plus / Wafacash</span>
-                    </div>
-                    <p class="text-xs text-slate-600">
-                        الاسم: <strong class="text-slate-800">Hamza Bouazza</strong> | الهاتف: <strong class="text-slate-800 font-mono">0661234567</strong>
-                    </p>
-                </div>
-            </div>
-
-            <div class="flex gap-3">
-                <a href="#transparency" onclick="closeDonationModal()" class="w-full py-3 bg-jlm-green hover:bg-jlm-greenHover text-white text-center font-bold rounded-xl text-sm transition">
-                    الانتقال لرفع وصل الدفع
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-5 left-5 bg-jlm-darkBlue text-white px-5 py-3 rounded-2xl shadow-2xl z-50 hidden flex items-center gap-3 text-sm border border-slate-700">
-        <i class="fa-solid fa-circle-check text-jlm-green text-lg"></i>
-        <span id="toast-message">تم الإجراء بنجاح</span>
-    </div>
-
-    <!-- JavaScript Logic -->
+    <!-- JavaScript For Language Switching -->
     <script>
-        // State Management
-        let currentAmount = 34500;
-        const targetAmount = 50000;
-        let donorCount = 142;
+        function setLanguage(lang) {
+            const htmlTag = document.documentElement;
+            const elements = document.querySelectorAll('[data-ar]');
+            const btnAr = document.getElementById('btn-ar');
+            const btnFr = document.getElementById('btn-fr');
 
-        // Clipboard Copy Helper
-        function copyToClipboard(text, successMessage) {
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(text);
+            if (lang === 'fr') {
+                htmlTag.setAttribute('dir', 'ltr');
+                htmlTag.setAttribute('lang', 'fr');
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-fr');
+                });
+                btnFr.className = "px-3 py-1 bg-blue-900 text-white font-bold";
+                btnAr.className = "px-3 py-1 bg-gray-200 text-gray-700 font-bold";
             } else {
-                const textarea = document.createElement('textarea');
-                textarea.value = text;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
+                htmlTag.setAttribute('dir', 'rtl');
+                htmlTag.setAttribute('lang', 'ar');
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-ar');
+                });
+                btnAr.className = "px-3 py-1 bg-blue-900 text-white font-bold";
+                btnFr.className = "px-3 py-1 bg-gray-200 text-gray-700 font-bold";
             }
-            showToast(successMessage);
-        }
-
-        // Show Toast Notification
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toast-message');
-            toastMessage.textContent = message;
-            toast.classList.remove('hidden');
-            setTimeout(() => {
-                toast.classList.add('hidden');
-            }, 3500);
-        }
-
-        // Open Donation Modal
-        function openDonationModal(tierName, amount) {
-            const modal = document.getElementById('donationModal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalSubtitle = document.getElementById('modal-subtitle');
-            
-            modalTitle.textContent = `التبرع بـ ${tierName}`;
-            if(amount > 0) {
-                modalSubtitle.textContent = `القيمة المحددة: ${amount} درهم مغربي`;
-                document.getElementById('donationAmount').value = amount;
-            } else {
-                modalSubtitle.textContent = 'أدخل المبلغ الذي ترغب بالمساهمة به في استمارة التثبيت';
-            }
-
-            document.getElementById('donationTier').value = tierName;
-            modal.classList.remove('hidden');
-        }
-
-        // Close Donation Modal
-        function closeDonationModal() {
-            document.getElementById('donationModal').classList.add('hidden');
-        }
-
-        // Handle Simulated Form Submit & Dynamic Progress Update
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('donorName').value;
-            const amount = parseInt(document.getElementById('donationAmount').value) || 0;
-
-            if (amount <= 0) {
-                showToast('يرجى إدخال مبلغ تبرع صحيح');
-                return;
-            }
-
-            // Update local state
-            currentAmount += amount;
-            donorCount += 1;
-
-            // Recalculate percentages
-            const percentage = Math.min(Math.round((currentAmount / targetAmount) * 100), 100);
-
-            // Update UI
-            document.getElementById('current-amount').textContent = currentAmount.toLocaleString('ar-MA');
-            document.getElementById('progress-bar-fill').style.width = `${percentage}%`;
-            document.getElementById('progress-percentage').textContent = `${percentage}%`;
-            document.getElementById('donor-count').textContent = donorCount;
-
-            // Reset form
-            document.getElementById('receiptForm').reset();
-
-            // Notify user
-            showToast(`شكراً لك يا ${name}! تم تسجيل الوصل وتحديث شريط التقدم بنجاح.`);
         }
     </script>
 </body>
