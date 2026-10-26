@@ -7,7 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
+        /* هذه الخاصية تجعل الانتقال بين الأقسام سلساً */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Tajawal', sans-serif; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -17,23 +19,24 @@
         <div class="font-black text-2xl text-blue-900 flex items-center gap-2">
             JLM ENCG Agadir <span class="text-green-600">| AGR</span>
         </div>
+        <!-- روابط التنقل الداخلية باستخدام الرمز # -->
         <div class="hidden md:flex gap-6 font-bold text-gray-600">
+            <a href="#hero" class="hover:text-blue-900 transition">الرئيسية</a>
             <a href="#about" class="hover:text-blue-900 transition">من نحن</a>
-            <a href="#vision" class="hover:text-blue-900 transition">رؤيتنا</a>
             <a href="#projects" class="hover:text-blue-900 transition">مشاريعنا</a>
             <a href="#contact" class="hover:text-blue-900 transition">تواصل معنا</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-l from-blue-900 to-blue-800 text-white py-24 px-6 text-center">
+    <section id="hero" class="bg-gradient-to-l from-blue-900 to-blue-800 text-white py-32 px-6 text-center">
         <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">نصنع القادة، ونبني أثراً مستداماً</h1>
         <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
-            لجنة الأنشطة المدرة للدخل (AGR) التابعة لنادي القادة الشباب بالمغرب (JLM) - المدرسة الوطنية للتجارة والتسيير بأكادير. نؤمن بالتمكين الاقتصادي والابتكار الاجتماعي لصناعة تغيير حقيقي.
+            لجنة الأنشطة المدرة للدخل (AGR) التابعة لنادي القادة الشباب بالمغرب (JLM) - المدرسة الوطنية للتجارة والتسيير بأكادير.
         </p>
         <div class="flex justify-center gap-4">
             <a href="#projects" class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 rounded-lg text-lg transition shadow-lg">اكتشف مشاريعنا</a>
-            <a href="#about" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold px-8 py-3 rounded-lg text-lg transition">تعرف علينا</a>
+            <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold px-8 py-3 rounded-lg text-lg transition">تواصل معنا</a>
         </div>
     </section>
 
@@ -41,12 +44,12 @@
     <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl font-black text-blue-900 mb-6">من نحن؟ (Qui sommes-nous)</h2>
+                <h2 class="text-3xl font-black text-blue-900 mb-6">من نحن؟</h2>
                 <p class="text-gray-600 text-lg leading-relaxed mb-4">
                     نحن مجموعة من الطلبة الشغوفين في <span class="font-bold text-gray-800">ENCG Agadir</span>، يجمعنا هدف واحد: خدمة المجتمع عبر مبادئ المقاولة الاجتماعية.
                 </p>
                 <p class="text-gray-600 text-lg leading-relaxed">
-                    من خلال لجنة <span class="font-bold text-green-600">AGR (Activités Génératrices de Revenus)</span>، نعمل على مرافقة وتأطير الفئات الهشة والمجتمعات المحلية بجهة سوس ماسة لخلق مشاريع مصغرة تضمن لهم الاستقلالية المالية والعيش الكريم.
+                    من خلال لجنة <span class="font-bold text-green-600">AGR</span>، نعمل على مرافقة الفئات الهشة لخلق مشاريع مصغرة تضمن لهم الاستقلالية المالية.
                 </p>
             </div>
             <div class="grid grid-cols-2 gap-4 text-center">
@@ -66,9 +69,8 @@
     <section id="projects" class="bg-gray-100 py-20 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-black text-center text-blue-900 mb-12">أبرز مشاريعنا المبتكرة</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project 1: Blue2Green -->
+                <!-- Project 1 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition">
                     <div class="bg-blue-200 h-48 flex items-center justify-center">
                         <span class="text-blue-800 font-black text-2xl">🌱 Blue2Green</span>
@@ -76,13 +78,12 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">مشروع Blue2Green</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            مشروع بيئي مبتكر يعتمد على تطوير (Bio-hydrogel) دائري باستخدام النفايات البحرية، يهدف إلى تحسين احتفاظ التربة بالمياه لدعم الزراعة المستدامة في جهة سوس ماسة.
+                            مشروع بيئي مبتكر يعتمد على تطوير (Bio-hydrogel) دائري باستخدام النفايات البحرية لتحسين احتفاظ التربة بالمياه.
                         </p>
                         <span class="inline-block bg-green-100 text-green-800 text-sm font-bold px-3 py-1 rounded-full">بيئة واستدامة</span>
                     </div>
                 </div>
-
-                <!-- Project 2: Generic AGR -->
+                <!-- Project 2 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition">
                     <div class="bg-orange-200 h-48 flex items-center justify-center">
                         <span class="text-orange-800 font-black text-2xl">🤝 التمكين المحلي</span>
@@ -90,7 +91,7 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">دعم التعاونيات المحلية</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            تأطير ومواكبة نساء المنطقة في تطوير منتجاتهن المجالية (كالخياطة والمنتجات الطبيعية)، مع توفير استراتيجيات تسويق وتغليف حديثة لضمان دخل مستدام.
+                            تأطير نساء المنطقة في تطوير منتجاتهن المجالية مع توفير استراتيجيات تسويق وتغليف حديثة.
                         </p>
                         <span class="inline-block bg-orange-100 text-orange-800 text-sm font-bold px-3 py-1 rounded-full">تمكين اقتصادي</span>
                     </div>
@@ -101,9 +102,8 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-black text-blue-900 mb-6">لنبنِ الأثر معاً</h2>
-        <p class="text-gray-600 text-lg mb-8">سواء كنت طالباً، مؤسسة، أو مستثمراً اجتماعياً، نرحب دائماً بالتعاون والشراكات الهادفة.</p>
-        
+        <h2 class="text-3xl font-black text-blue-900 mb-6">تواصل معنا</h2>
+        <p class="text-gray-600 text-lg mb-8">نرحب دائماً بالتعاون والشراكات الهادفة مع المؤسسات والأفراد.</p>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row justify-around items-center gap-6">
             <div>
                 <p class="text-sm text-gray-500 mb-1">البريد الإلكتروني</p>
